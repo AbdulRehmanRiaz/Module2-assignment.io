@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+main {
+    padding: 20px;
+}
+
+.chicken-section,
+.beef-section,
+.sushi-section {
+    background-color: darkgrey;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    position: relative;
+    float: left; /* Float the sections to create a row */
+    width: 30%; /* Set width to 30% for equal spacing */
+    margin-right: 2.33%; /* Set margin-right to 3.33% for equal spacing */
+    box-sizing: border-box; /* Include border in the width calculation */
+}
+
+.chicken-section .section-title,
+.beef-section .section-title,
+.sushi-section .section-title {
+    width: 80px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.chicken-section .section-title{
+background-color: pink;
+}
+
+.beef-section .section-title{
+background-color: red;
+}
+
+.sushi-section .section-title{
+background-color: white;
+}
+
+p {
+    padding: 10px;
+}
+
+/* Media Queries for responsive layout */
+@media (max-width: 991px) {
+    .chicken-section,
+    .beef-section,
+    .sushi-section {
+        width: calc(50% - 20px);
+        margin-right: 20px;
+    }
+
+    .chicken-section:nth-child(2n),
+    .beef-section:nth-child(2n),
+    .sushi-section:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .sushi-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .chicken-section,
+    .beef-section,
+    .sushi-section {
+        width: 100%;
+        margin-right: 0;
+    }
+}
